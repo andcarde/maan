@@ -1,0 +1,1846 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://maan.com#"
+     xml:base="http://maan.com"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:mod="https://w3id.org/mod#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcam="http://purl.org/dc/dcam/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:maan="http://maan.com#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:time="https://www.w3.org/2006/time#"
+     xmlns:ebaco="http://purl.org/ceu/ebaco/core/1.0#"
+     xmlns:skos1="http://www.w3.org/2008/05/skos#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+     xmlns:statistics="http://purl.org/net/OCRe/statistics.owl#"
+     xmlns:webprotege="http://protege.stanford.edu/webprotege/"
+     xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
+     xmlns:ebaco_tasting="http://purl.org/ceu/ebaco/tasting/1.0"
+     xmlns:study_protocol="http://purl.org/net/OCRe/study_protocol.owl#">
+    <owl:Ontology rdf:about="http://maan.com#">
+        <owl:imports rdf:resource="http://purl.org/ceu/ebaco/core/1.0"/>
+        <owl:imports rdf:resource="http://purl.org/ceu/ebaco/tasting/1.0"/>
+        <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+        <owl:imports rdf:resource="http://purl.org/roh/mirror/vivo/1.11.0"/>
+        <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time#2016"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <dc:creator>Marcos Fernández González &amp; Andrés Cardenal Antón</dc:creator>
+        <dc:title>MA-Enología</dc:title>
+        <owl:versionInfo>0.0.1</owl:versionInfo>
+        <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- https://w3id.org/mod#createdWith -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#createdWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://maan.com#compuestaPorMadera -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#compuestaPorMadera">
+        <owl:inverseOf rdf:resource="http://maan.com#compuestaPorMaderaInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Barrica"/>
+        <rdfs:range rdf:resource="http://maan.com#Madera"/>
+        <rdfs:label>compuesta por madera</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#compuestaPorMaderaInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#compuestaPorMaderaInversa">
+        <rdfs:domain rdf:resource="http://maan.com#Madera"/>
+        <rdfs:range rdf:resource="http://maan.com#Barrica"/>
+        <rdfs:label>compuesta por madera inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#compuestoPor -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#compuestoPor">
+        <owl:inverseOf rdf:resource="http://maan.com#compuestoPorInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#ListaDeLotes"/>
+        <rdfs:range rdf:resource="http://maan.com#Lote"/>
+        <rdfs:label>compuesto por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#compuestoPorInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#compuestoPorInversa">
+        <rdfs:domain rdf:resource="http://maan.com#Lote"/>
+        <rdfs:range rdf:resource="http://maan.com#ListaDeLotes"/>
+        <rdfs:label>compuesto por inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#estaContenidoEn -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#estaContenidoEn">
+        <owl:inverseOf rdf:resource="http://maan.com#estaContenidoEnInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Contención"/>
+        <rdfs:range rdf:resource="http://maan.com#Contenedor"/>
+        <rdfs:label>esta contenido en</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#estaContenidoEnInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#estaContenidoEnInversa">
+        <rdfs:domain rdf:resource="http://maan.com#Contenedor"/>
+        <rdfs:range rdf:resource="http://maan.com#Contención"/>
+        <rdfs:label>esta contenido en inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#medidoEnTiempo -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#medidoEnTiempo">
+        <owl:inverseOf rdf:resource="http://maan.com#medidoEnTiempoInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Medida"/>
+        <rdfs:range rdf:resource="https://www.w3.org/2006/time#Instant"/>
+        <rdfs:label>medido en tiempo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#medidoEnTiempoInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#medidoEnTiempoInversa">
+        <rdfs:domain rdf:resource="https://www.w3.org/2006/time#Instant"/>
+        <rdfs:range rdf:resource="http://maan.com#Medida"/>
+        <rdfs:label>medido en tiempo inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#mide -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#mide">
+        <owl:inverseOf rdf:resource="http://maan.com#mideInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Unidad_Medida"/>
+        <rdfs:range rdf:resource="http://maan.com#Magnitud"/>
+        <rdfs:label>mide</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#mideInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#mideInversa">
+        <rdfs:domain rdf:resource="http://maan.com#Magnitud"/>
+        <rdfs:range rdf:resource="http://maan.com#Unidad_Medida"/>
+        <rdfs:label>mide inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#multiplicadorDeUnidad -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#multiplicadorDeUnidad">
+        <owl:inverseOf rdf:resource="http://maan.com#multiplicadorDeUnidadInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Numero_Racional"/>
+        <rdfs:range rdf:resource="http://maan.com#Medida"/>
+        <rdfs:label>multiplicador de unidad</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#multiplicadorDeUnidadInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#multiplicadorDeUnidadInversa">
+        <rdfs:domain rdf:resource="http://maan.com#Medida"/>
+        <rdfs:range rdf:resource="http://maan.com#Numero_Racional"/>
+        <rdfs:label>multiplicador de unidad inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#objetoContenido -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#objetoContenido">
+        <owl:inverseOf rdf:resource="http://maan.com#objetoContenidoInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Contención"/>
+        <rdfs:range rdf:resource="http://maan.com#LoteVino"/>
+        <rdfs:label>objeto contenido</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#objetoContenidoInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#objetoContenidoInversa">
+        <rdfs:domain rdf:resource="http://maan.com#LoteVino"/>
+        <rdfs:range rdf:resource="http://maan.com#Contención"/>
+        <rdfs:label>objeto contenido inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#ocurreDurante -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#ocurreDurante">
+        <owl:inverseOf rdf:resource="http://maan.com#ocurreDuranteInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:range rdf:resource="https://www.w3.org/2006/time#Interval"/>
+        <rdfs:label>ocurre durante</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#ocurreDuranteInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#ocurreDuranteInversa">
+        <rdfs:domain rdf:resource="https://www.w3.org/2006/time#Interval"/>
+        <rdfs:range rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:label>ocurre durante inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#poseidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#poseidoPor">
+        <owl:inverseOf rdf:resource="http://maan.com#poseidoPorInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Contenedor"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:label>poseido por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#poseidoPorInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#poseidoPorInversa">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://maan.com#Contenedor"/>
+        <rdfs:label>poseido por inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#procede_de -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#procede_de">
+        <owl:inverseOf rdf:resource="http://maan.com#procede_de_inversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#LoteUva"/>
+        <rdfs:range rdf:resource="http://maan.com#Finca"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#procede_de_inversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#procede_de_inversa">
+        <rdfs:domain rdf:resource="http://maan.com#Finca"/>
+        <rdfs:range rdf:resource="http://maan.com#LoteUva"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#provieneDeProceso -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#provieneDeProceso">
+        <owl:inverseOf rdf:resource="http://maan.com#provieneDeProcesoInveras"/>
+        <rdfs:domain rdf:resource="http://maan.com#Orden_Proceso"/>
+        <rdfs:range rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:label>proviene de proceso</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#provieneDeProcesoInveras -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#provieneDeProcesoInveras">
+        <rdfs:domain rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:range rdf:resource="http://maan.com#Orden_Proceso"/>
+        <rdfs:label>proviene de proceso inveras</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#realizadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#realizadoPor">
+        <owl:inverseOf rdf:resource="http://maan.com#realizadoPorInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Cata"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label>realizado por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#realizadoPorInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#realizadoPorInversa">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://maan.com#Cata"/>
+        <rdfs:label>realizado por inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#resultaEn -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#resultaEn">
+        <owl:inverseOf rdf:resource="http://maan.com#resultaEnInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:range rdf:resource="http://maan.com#ListaDeLotes"/>
+        <rdfs:label>resulta en</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#resultaEnInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#resultaEnInversa">
+        <rdfs:domain rdf:resource="http://maan.com#ListaDeLotes"/>
+        <rdfs:range rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:label>resulta en inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#rolComercial -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#rolComercial">
+        <owl:inverseOf rdf:resource="http://maan.com#rolComercialInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Materia"/>
+        <rdfs:range rdf:resource="http://maan.com#Producto"/>
+        <rdfs:label>rol comercial</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#rolComercialInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#rolComercialInversa">
+        <rdfs:domain rdf:resource="http://maan.com#Producto"/>
+        <rdfs:range rdf:resource="http://maan.com#Materia"/>
+        <rdfs:label>rol comercial inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#seAplicaA -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#seAplicaA">
+        <owl:inverseOf rdf:resource="http://maan.com#seAplicaAInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:range rdf:resource="http://maan.com#ListaDeLotes"/>
+        <rdfs:label>se aplica a</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#seAplicaAInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#seAplicaAInversa">
+        <rdfs:domain rdf:resource="http://maan.com#ListaDeLotes"/>
+        <rdfs:range rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:label>se aplica a inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#seHaDetectadoAroma -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#seHaDetectadoAroma">
+        <owl:inverseOf rdf:resource="http://maan.com#seHaDetectadoAromaInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Cata"/>
+        <rdfs:range rdf:resource="http://purl.org/ceu/ebaco/tasting/1.0#Wine_palate"/>
+        <rdfs:label>se ha detectado aroma</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#seHaDetectadoAromaInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#seHaDetectadoAromaInversa">
+        <rdfs:domain rdf:resource="http://purl.org/ceu/ebaco/tasting/1.0#Wine_palate"/>
+        <rdfs:range rdf:resource="http://maan.com#Cata"/>
+        <rdfs:label>se ha detectado aroma inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tiempoContencion -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tiempoContencion">
+        <owl:inverseOf rdf:resource="http://maan.com#tiempoContencionInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Contención"/>
+        <rdfs:range rdf:resource="https://www.w3.org/2006/time#Interval"/>
+        <rdfs:label>tiempo contencion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tiempoContencionInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tiempoContencionInversa">
+        <rdfs:domain rdf:resource="https://www.w3.org/2006/time#Interval"/>
+        <rdfs:range rdf:resource="http://maan.com#Contención"/>
+        <rdfs:label>tiempo contencion inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneAromaDe -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneAromaDe">
+        <owl:inverseOf rdf:resource="http://maan.com#tieneAromaDeInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#LoteVino"/>
+        <rdfs:range rdf:resource="http://purl.org/ceu/ebaco/tasting/1.0#Wine_palate"/>
+        <rdfs:label>tiene aroma de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneAromaDeInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneAromaDeInversa">
+        <rdfs:domain rdf:resource="http://purl.org/ceu/ebaco/tasting/1.0#Wine_palate"/>
+        <rdfs:range rdf:resource="http://maan.com#LoteVino"/>
+        <rdfs:label>tiene aroma de inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneForma -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneForma">
+        <owl:inverseOf rdf:resource="http://maan.com#tieneFormaInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Forma_Botella"/>
+        <rdfs:range rdf:resource="http://maan.com#Botella"/>
+        <rdfs:label>tiene forma</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneFormaInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneFormaInversa">
+        <rdfs:domain rdf:resource="http://maan.com#Botella"/>
+        <rdfs:range rdf:resource="http://maan.com#Forma_Botella"/>
+        <rdfs:label>tiene forma inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneMedida -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneMedida">
+        <owl:inverseOf rdf:resource="http://maan.com#tieneMedidaInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Materia"/>
+        <rdfs:range rdf:resource="http://maan.com#Medida"/>
+        <rdfs:label>tiene medida</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneMedidaInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneMedidaInversa">
+        <rdfs:domain rdf:resource="http://maan.com#Medida"/>
+        <rdfs:range rdf:resource="http://maan.com#Materia"/>
+        <rdfs:label>tiene medida inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneOrden -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneOrden">
+        <owl:inverseOf rdf:resource="http://maan.com#tieneOrdenInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Orden_Proceso"/>
+        <rdfs:range rdf:resource="http://maan.com#Ordinal"/>
+        <rdfs:label>tiene orden</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneOrdenInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneOrdenInversa">
+        <rdfs:domain rdf:resource="http://maan.com#Ordinal"/>
+        <rdfs:range rdf:resource="http://maan.com#Orden_Proceso"/>
+        <rdfs:label>tiene orden inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneProceso -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneProceso">
+        <owl:inverseOf rdf:resource="http://maan.com#tieneProcesoInverso"/>
+        <rdfs:domain rdf:resource="http://maan.com#Orden_Proceso"/>
+        <rdfs:range rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:label>tiene proceso</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneProcesoInverso -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneProcesoInverso">
+        <rdfs:domain rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:range rdf:resource="http://maan.com#Orden_Proceso"/>
+        <rdfs:label>tiene proceso inverso</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneProveedor -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneProveedor">
+        <owl:inverseOf rdf:resource="http://maan.com#tieneProveedorInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Producto"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:label>tiene proveedor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneProveedorInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneProveedorInversa">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://maan.com#Producto"/>
+        <rdfs:label>tiene proveedor inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneUnidad -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneUnidad">
+        <owl:inverseOf rdf:resource="http://maan.com#tieneUnidadInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Medida"/>
+        <rdfs:range rdf:resource="http://maan.com#Unidad_Medida"/>
+        <rdfs:label>tiene unidad</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#tieneUnidadInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#tieneUnidadInversa">
+        <rdfs:domain rdf:resource="http://maan.com#Unidad_Medida"/>
+        <rdfs:range rdf:resource="http://maan.com#Medida"/>
+        <rdfs:label>tiene unidad inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#usadoEnElaboracionVino -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#usadoEnElaboracionVino">
+        <owl:inverseOf rdf:resource="http://maan.com#usadoEnElaboracionVinoInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Bentonita"/>
+        <rdfs:range rdf:resource="http://maan.com#AgenteClarificante"/>
+        <rdfs:label>usado en elaboracion vino</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#usadoEnElaboracionVinoInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#usadoEnElaboracionVinoInversa">
+        <rdfs:domain rdf:resource="http://maan.com#AgenteClarificante"/>
+        <rdfs:range rdf:resource="http://maan.com#Bentonita"/>
+        <rdfs:label>usado en elaboracion vino inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#utilizaClarificante -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#utilizaClarificante">
+        <owl:inverseOf rdf:resource="http://maan.com#utilizaClarificanteInversa"/>
+        <rdfs:domain rdf:resource="http://maan.com#Clarificacion"/>
+        <rdfs:range rdf:resource="http://maan.com#AgenteClarificante"/>
+        <rdfs:label>utiliza clarificante</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://maan.com#utilizaClarificanteInversa -->
+
+    <owl:ObjectProperty rdf:about="http://maan.com#utilizaClarificanteInversa">
+        <rdfs:domain rdf:resource="http://maan.com#AgenteClarificante"/>
+        <rdfs:range rdf:resource="http://maan.com#Clarificacion"/>
+        <rdfs:label>utiliza clarificante inversa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/hasPart">
+        <owl:inverseOf rdf:resource="http://purl.org/dc/elements/1.1/isPartOf"/>
+        <rdfs:domain rdf:resource="http://maan.com#Lote"/>
+        <rdfs:range rdf:resource="http://maan.com#Lote"/>
+        <rdfs:label>has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://maan.com#Lote"/>
+        <rdfs:range rdf:resource="http://maan.com#Lote"/>
+        <rdfs:label>is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#procede_de"/>
+                <owl:allValuesFrom rdf:resource="http://maan.com#LoteUva"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://maan.com#AgenteClarificante -->
+
+    <owl:Class rdf:about="http://maan.com#AgenteClarificante">
+        <rdfs:comment>Una agente clarificante es todo elemento que actúa sobre el vino produciendo la clarificación del mismo, es decir, la disminución de su turbidez.</rdfs:comment>
+        <rdfs:label>Agente Clarificante</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Albeisa -->
+
+    <owl:Class rdf:about="http://maan.com#Albeisa">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Forma_Botella"/>
+        <rdfs:comment>Forma de botella.</rdfs:comment>
+        <rdfs:label>Albeisa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Americano -->
+
+    <owl:Class rdf:about="http://maan.com#Americano">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Roble"/>
+        <rdfs:comment>Madera del roble americano.</rdfs:comment>
+        <rdfs:label>Americano</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Anfora -->
+
+    <owl:Class rdf:about="http://maan.com#Anfora">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Forma_Botella"/>
+        <rdfs:comment>Forma de botella.</rdfs:comment>
+        <rdfs:label>Anfora</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Balthazar -->
+
+    <owl:Class rdf:about="http://maan.com#Balthazar">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Barrica"/>
+        <rdfs:comment>Tipo de barrica.</rdfs:comment>
+        <rdfs:label>Balthazar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Barrica -->
+
+    <owl:Class rdf:about="http://maan.com#Barrica">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#compuestaPorMadera"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Barrica"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://maan.com#Contenedor"/>
+        <rdfs:comment>Tonel utilizado para elaborar y conservar el vino.</rdfs:comment>
+        <rdfs:label>Barrica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Bentonita -->
+
+    <owl:Class rdf:about="http://maan.com#Bentonita">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#rolComercial"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Bentonita"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#usadoEnElaboracionVino"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Bentonita"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://maan.com#Materia"/>
+        <rdfs:comment>Arcilla de gran poder de absorción con múltiples usos industriales.</rdfs:comment>
+        <rdfs:label>Bentonita</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Bodega -->
+
+    <owl:Class rdf:about="http://maan.com#Bodega">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/roh/mirror/vivo#Company"/>
+        <rdfs:label>Bodega</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Bordelesa -->
+
+    <owl:Class rdf:about="http://maan.com#Bordelesa">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Forma_Botella"/>
+        <rdfs:comment>Forma de botella.</rdfs:comment>
+        <rdfs:label>Bordelesa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Borgoñona -->
+
+    <owl:Class rdf:about="http://maan.com#Borgoñona">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Forma_Botella"/>
+        <rdfs:comment>Forma de botella.</rdfs:comment>
+        <rdfs:label>Borgoñona</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Botella -->
+
+    <owl:Class rdf:about="http://maan.com#Botella">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#tieneForma"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Botella"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://maan.com#Contenedor"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://maan.com#Grandes"/>
+            <rdf:Description rdf:about="http://maan.com#Pequeñas"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment>Recipiente de cristal, vidrio, plástico u otro material, con el cuello estrecho, que sirve para contener líquidos.</rdfs:comment>
+        <rdfs:label>Botella</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#BotellaChampan -->
+
+    <owl:Class rdf:about="http://maan.com#BotellaChampan">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Forma_Botella"/>
+        <rdfs:comment>Forma de botella.</rdfs:comment>
+        <rdfs:label>Botella Champan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Cata -->
+
+    <owl:Class rdf:about="http://maan.com#Cata">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Degustación del vino</rdfs:comment>
+        <rdfs:label>Cata</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Chopin -->
+
+    <owl:Class rdf:about="http://maan.com#Chopin">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Pequeñas"/>
+        <rdfs:comment>Botella pequeña.</rdfs:comment>
+        <rdfs:label>Chopin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Clarificacion -->
+
+    <owl:Class rdf:about="http://maan.com#Clarificacion">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#utilizaClarificante"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Clarificacion"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Acción de clarificar.</rdfs:comment>
+        <rdfs:label>Clarificacion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Comercializacion -->
+
+    <owl:Class rdf:about="http://maan.com#Comercializacion">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Acción y efecto de comercializar.</rdfs:comment>
+        <rdfs:label>Comercializacion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Concentracion -->
+
+    <owl:Class rdf:about="http://maan.com#Concentracion">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Magnitud"/>
+        <rdfs:comment>agnitud que expresa la cantidad de una sustancia por unidad de volumen.</rdfs:comment>
+        <rdfs:label>Concentracion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Contención -->
+
+    <owl:Class rdf:about="http://maan.com#Contención">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#objetoContenido"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Contención"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#tiempoContencion"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Contención"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>La contención es una relación ternaria que relaciona un lote de vino con su contenedor durante el espacio de tiempo durante el cúal se ha contenido.</rdfs:comment>
+        <rdfs:label>Contención</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Contenedor -->
+
+    <owl:Class rdf:about="http://maan.com#Contenedor">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Materia"/>
+        <rdfs:comment>Recipiente. Utensilio destinado a guardar o conservar algo.</rdfs:comment>
+        <rdfs:label>Contenedor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Demi -->
+
+    <owl:Class rdf:about="http://maan.com#Demi">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Pequeñas"/>
+        <rdfs:comment>Botella pequeña.</rdfs:comment>
+        <rdfs:label>Demi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Densidad -->
+
+    <owl:Class rdf:about="http://maan.com#Densidad">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Magnitud"/>
+        <rdfs:comment>Magnitud que expresa la relación entre la masa y el volumen de un cuerpo.</rdfs:comment>
+        <rdfs:label>Densidad</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Deposito -->
+
+    <owl:Class rdf:about="http://maan.com#Deposito">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Contenedor"/>
+        <rdfs:comment>Recipiente de líquidos</rdfs:comment>
+        <rdfs:label>Deposito</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Desfangado -->
+
+    <owl:Class rdf:about="http://maan.com#Desfangado">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Acción de desfangar.</rdfs:comment>
+        <rdfs:label>Desfangado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Despalillado -->
+
+    <owl:Class rdf:about="http://maan.com#Despalillado">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Acción de despalillar.</rdfs:comment>
+        <rdfs:label>Despalillado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Embotellado -->
+
+    <owl:Class rdf:about="http://maan.com#Embotellado">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Acción de embotellar.</rdfs:comment>
+        <rdfs:label>Embotellado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Estandar -->
+
+    <owl:Class rdf:about="http://maan.com#Estandar">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Pequeñas"/>
+        <rdfs:comment>Botella pequeña.</rdfs:comment>
+        <rdfs:label>Estandar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Fermentacion_Alcoholica -->
+
+    <owl:Class rdf:about="http://maan.com#Fermentacion_Alcoholica">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Acción de la fermentación alcohólica.</rdfs:comment>
+        <rdfs:label>Fermentacion_ Alcoholica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Fermentacion_Manolactica -->
+
+    <owl:Class rdf:about="http://maan.com#Fermentacion_Manolactica">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Acción de la fermentación maloláctica.</rdfs:comment>
+        <rdfs:label>Fermentacion_ Malolactica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Finca -->
+
+    <owl:Class rdf:about="http://maan.com#Finca">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+        <rdfs:comment>Lugar geográfico acotado en un registro de la propiedad.</rdfs:comment>
+        <rdfs:label>Finca</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Forma_Botella -->
+
+    <owl:Class rdf:about="http://maan.com#Forma_Botella">
+        <rdfs:comment>Forma que tiene una botella.</rdfs:comment>
+        <rdfs:label>Forma_ Botella</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Francés -->
+
+    <owl:Class rdf:about="http://maan.com#Francés">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Roble"/>
+        <rdfs:comment>Madera del roble francés.</rdfs:comment>
+        <rdfs:label>Francés</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Goliat -->
+
+    <owl:Class rdf:about="http://maan.com#Goliat">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Barrica"/>
+        <rdfs:comment>Tipo de barrica.</rdfs:comment>
+        <rdfs:label>Goliat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#GradoCelsius -->
+
+    <owl:Class rdf:about="http://maan.com#GradoCelsius">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Unidad_Medida"/>
+        <rdfs:comment>Unidad de medida de temperatura en el sistema métrico, donde 0 grados Celsius es el punto de congelación del agua y 100 grados Celsius es el punto de ebullición del agua a la presión atmosférica normal. También conocido como centígrado.</rdfs:comment>
+        <rdfs:label>Grado Celsius</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Grado_Alcoholico -->
+
+    <owl:Class rdf:about="http://maan.com#Grado_Alcoholico">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Unidad_Medida"/>
+        <rdfs:comment>Medida de la concentración de alcohol en una sustancia, comúnmente expresada como un porcentaje. En el contexto de bebidas alcohólicas, el grado alcohólico indica la proporción de alcohol etílico presente en la bebida.</rdfs:comment>
+        <rdfs:label>Grado_ Alcoholico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Gramo -->
+
+    <owl:Class rdf:about="http://maan.com#Gramo">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Unidad_Medida"/>
+        <rdfs:comment>Unidad básica de masa en el sistema métrico, equivalente a una milésima parte de un kilogramo. Se utiliza para medir cantidades pequeñas de peso.</rdfs:comment>
+        <rdfs:label>Gramo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#GramoPartidoLitro -->
+
+    <owl:Class rdf:about="http://maan.com#GramoPartidoLitro">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Unidad_Medida"/>
+        <rdfs:comment>Una unidad de medida utilizada para expresar la cantidad de un componente específico en un litro de una solución. Indica la cantidad de gramos de ese componente presente en un litro de la solución.</rdfs:comment>
+        <rdfs:label>Gramo Partido Litro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Grandes -->
+
+    <owl:Class rdf:about="http://maan.com#Grandes">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Botella"/>
+        <rdfs:comment>Botellas de tamaño grande.</rdfs:comment>
+        <rdfs:label>Grandes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Hungaro -->
+
+    <owl:Class rdf:about="http://maan.com#Hungaro">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Roble"/>
+        <rdfs:comment>Madera del roble húngaro.</rdfs:comment>
+        <rdfs:label>Hungaro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Jeroboam -->
+
+    <owl:Class rdf:about="http://maan.com#Jeroboam">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Grandes"/>
+        <rdfs:comment>Botella grande.</rdfs:comment>
+        <rdfs:label>Jeroboam</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#KilogramoPartidoLitro -->
+
+    <owl:Class rdf:about="http://maan.com#KilogramoPartidoLitro">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Unidad_Medida"/>
+        <rdfs:comment>Una unidad de medida que representa la concentración de un componente en un litro de una solución, pero en una escala de kilogramos en lugar de gramos. Indica la cantidad de kilogramos de un componente presente en un litro de la solución.</rdfs:comment>
+        <rdfs:label>Kilogramo Partido Litro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#ListaDeLotes -->
+
+    <owl:Class rdf:about="http://maan.com#ListaDeLotes">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#compuestoPor"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#ListaDeLotes"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Conjunto de lotes</rdfs:comment>
+        <rdfs:label>Lista De Lotes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Lote -->
+
+    <owl:Class rdf:about="http://maan.com#Lote">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#rolComercial"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Lote"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/isPartOf"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Lote"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://maan.com#Materia"/>
+        <rdfs:comment>Conjunto de objetos similares entre sí que se agrupan con un fin determinado.</rdfs:comment>
+        <rdfs:label>Lote</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#LoteBotella -->
+
+    <owl:Class rdf:about="http://maan.com#LoteBotella">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Lote"/>
+        <rdfs:comment>Lote de botellas vacías</rdfs:comment>
+        <rdfs:label>Lote Botella</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#LoteBotellasDeVino -->
+
+    <owl:Class rdf:about="http://maan.com#LoteBotellasDeVino">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Lote"/>
+        <rdfs:comment>Lote de botellas de vino</rdfs:comment>
+        <rdfs:label>Lote Botellas De Vino</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#LoteUva -->
+
+    <owl:Class rdf:about="http://maan.com#LoteUva">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#procede_de"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#LoteUva"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://maan.com#Lote"/>
+        <rdfs:comment>Conjunto de bayas más o menos redondas, fruto de la vid, que forma racimos.</rdfs:comment>
+        <rdfs:comment>Lote de racimos de uva</rdfs:comment>
+        <rdfs:label>Lote Uva</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#LoteVino -->
+
+    <owl:Class rdf:about="http://maan.com#LoteVino">
+        <owl:equivalentClass rdf:resource="http://purl.org/ceu/ebaco/core/1.0#Wine"/>
+        <rdfs:subClassOf rdf:resource="http://maan.com#Lote"/>
+        <rdfs:comment>Bebida alcohólica que se hace del zumo de las uvas exprimido y fermentado naturalmente.</rdfs:comment>
+        <rdfs:label>Lote Vino</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Macerado -->
+
+    <owl:Class rdf:about="http://maan.com#Macerado">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Envejicimiento del vino en un tonel de roble.</rdfs:comment>
+        <rdfs:label>Macerado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Madera -->
+
+    <owl:Class rdf:about="http://maan.com#Madera">
+        <rdfs:comment>Parte sólida de los árboles cubierta por la corteza.</rdfs:comment>
+        <rdfs:label>Madera</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Maduracion -->
+
+    <owl:Class rdf:about="http://maan.com#Maduracion">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Acción de madurar.</rdfs:comment>
+        <rdfs:label>Maduracion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Magnitud -->
+
+    <owl:Class rdf:about="http://maan.com#Magnitud">
+        <rdfs:comment>Propiedad física que puede ser medida.</rdfs:comment>
+        <rdfs:label>Magnitud</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Margum -->
+
+    <owl:Class rdf:about="http://maan.com#Margum">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Pequeñas"/>
+        <rdfs:comment>Botella pequeña.</rdfs:comment>
+        <rdfs:label>Margum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Marshallese -->
+
+    <owl:Class rdf:about="http://maan.com#Marshallese">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Forma_Botella"/>
+        <rdfs:comment>Forma de botella.</rdfs:comment>
+        <rdfs:label>Marshallese</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Materia -->
+
+    <owl:Class rdf:about="http://maan.com#Materia">
+        <rdfs:comment>Realidad espacial y perceptible por los sentidos de la que están hechas las cosas que nos rodean y que, con la energía, constituye el mundo físico.</rdfs:comment>
+        <rdfs:label>Materia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Mathusalem -->
+
+    <owl:Class rdf:about="http://maan.com#Mathusalem">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Grandes"/>
+        <rdfs:comment>Botella grande.</rdfs:comment>
+        <rdfs:label>Mathusalem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Medida -->
+
+    <owl:Class rdf:about="http://maan.com#Medida">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#medidoEnTiempo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Medida"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#multiplicadorDeUnidad"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Medida"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#tieneUnidad"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Medida"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Expresión del resultado de una medición.</rdfs:comment>
+        <rdfs:label>Medida</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Melchior -->
+
+    <owl:Class rdf:about="http://maan.com#Melchior">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Grandes"/>
+        <rdfs:comment>Botella grande.</rdfs:comment>
+        <rdfs:label>Melchior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Melchizedec -->
+
+    <owl:Class rdf:about="http://maan.com#Melchizedec">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Barrica"/>
+        <rdfs:comment>Tipo de barrica.</rdfs:comment>
+        <rdfs:label>Melchizedec</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#NTU -->
+
+    <owl:Class rdf:about="http://maan.com#NTU">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Unidad_Medida"/>
+        <rdfs:comment>Medida de la turbidez de un líquido</rdfs:comment>
+        <rdfs:label>N T U</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Nabuchodonosor -->
+
+    <owl:Class rdf:about="http://maan.com#Nabuchodonosor">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Barrica"/>
+        <rdfs:comment>Tipo de barrica.</rdfs:comment>
+        <rdfs:label>Nabuchodonosor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Nelchor -->
+
+    <owl:Class rdf:about="http://maan.com#Nelchor">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Barrica"/>
+        <rdfs:comment>Tipo de barrica.</rdfs:comment>
+        <rdfs:label>Nelchor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Numero_Racional -->
+
+    <owl:Class rdf:about="http://maan.com#Numero_Racional">
+        <rdfs:comment>Número que se expresa como cociente de dos enteros.</rdfs:comment>
+        <rdfs:label>Numero_ Racional</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Orden_Proceso -->
+
+    <owl:Class rdf:about="http://maan.com#Orden_Proceso">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#provieneDeProceso"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Orden_Proceso"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#tieneOrden"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Orden_Proceso"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#tieneProceso"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Orden_Proceso"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Relación terciaria entre un proceso padre, un proceso hijo y un orden que implica la secuencia temporal de los hijos.</rdfs:comment>
+        <rdfs:label>Orden_ Proceso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Ordinal -->
+
+    <owl:Class rdf:about="http://maan.com#Ordinal">
+        <rdfs:comment>Que expresa el lugar que ocupa una determinada unidad en una serie.</rdfs:comment>
+        <rdfs:label>Ordinal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Pequeñas -->
+
+    <owl:Class rdf:about="http://maan.com#Pequeñas">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Botella"/>
+        <rdfs:comment>Botellas de tamaño pequeño.</rdfs:comment>
+        <rdfs:label>Pequeñas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Piccolo -->
+
+    <owl:Class rdf:about="http://maan.com#Piccolo">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Pequeñas"/>
+        <rdfs:comment>Botella pequeña.</rdfs:comment>
+        <rdfs:label>Piccolo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Porto -->
+
+    <owl:Class rdf:about="http://maan.com#Porto">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Forma_Botella"/>
+        <rdfs:comment>Forma de botella.</rdfs:comment>
+        <rdfs:label>Porto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Prensado -->
+
+    <owl:Class rdf:about="http://maan.com#Prensado">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Acción de prensar</rdfs:comment>
+        <rdfs:label>Prensado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Proceso -->
+
+    <owl:Class rdf:about="http://maan.com#Proceso">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#ocurreDurante"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Proceso"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#resultaEn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Proceso"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#seAplicaA"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Proceso"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Conjunto de las fases sucesivas de un fenómeno natural o de una operación artificial.</rdfs:comment>
+        <rdfs:label>Proceso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Producto -->
+
+    <owl:Class rdf:about="http://maan.com#Producto">
+        <rdfs:comment>Cosa producida.</rdfs:comment>
+        <rdfs:label>Producto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Rehoboam -->
+
+    <owl:Class rdf:about="http://maan.com#Rehoboam">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Grandes"/>
+        <rdfs:comment>Botella grande.</rdfs:comment>
+        <rdfs:label>Rehoboam</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Remontaje -->
+
+    <owl:Class rdf:about="http://maan.com#Remontaje">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Acción de romper la corteza de hollejos de la uva con el fin de romojar el vino en el proceso de vinificación.</rdfs:comment>
+        <rdfs:label>Remontaje</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Renana -->
+
+    <owl:Class rdf:about="http://maan.com#Renana">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Forma_Botella"/>
+        <rdfs:comment>Forma de botella.</rdfs:comment>
+        <rdfs:label>Renana</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#ReposadoEnBotella -->
+
+    <owl:Class rdf:about="http://maan.com#ReposadoEnBotella">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Proceso de estabilización del vino en botella.</rdfs:comment>
+        <rdfs:label>Reposado En Botella</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Roble -->
+
+    <owl:Class rdf:about="http://maan.com#Roble">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Madera"/>
+        <rdfs:comment>Madera del roble.</rdfs:comment>
+        <rdfs:label>Roble</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Salmanazar -->
+
+    <owl:Class rdf:about="http://maan.com#Salmanazar">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Grandes"/>
+        <rdfs:comment>Botella grande.</rdfs:comment>
+        <rdfs:label>Salmanazar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Separación -->
+
+    <owl:Class rdf:about="http://maan.com#Separación">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Proceso de separar un componente en dos.</rdfs:comment>
+        <rdfs:label>Separación</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Solomon -->
+
+    <owl:Class rdf:about="http://maan.com#Solomon">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Barrica"/>
+        <rdfs:comment>Tipo de barrica.</rdfs:comment>
+        <rdfs:label>Solomon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Sovereign -->
+
+    <owl:Class rdf:about="http://maan.com#Sovereign">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Barrica"/>
+        <rdfs:comment>Tipo de barrica.</rdfs:comment>
+        <rdfs:label>Sovereign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Temperatura -->
+
+    <owl:Class rdf:about="http://maan.com#Temperatura">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Magnitud"/>
+        <rdfs:comment>Magnitud física que expresa el grado de frío o calor de los cuerpos o del ambiente.</rdfs:comment>
+        <rdfs:label>Temperatura</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Turbidez -->
+
+    <owl:Class rdf:about="http://maan.com#Turbidez">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Magnitud"/>
+        <rdfs:comment>Cualidad de turbio.</rdfs:comment>
+        <rdfs:label>Turbidez</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Unidad_Medida -->
+
+    <owl:Class rdf:about="http://maan.com#Unidad_Medida">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://maan.com#mide"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://maan.com#Unidad_Medida"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Patrón de una magnitud que sirve como estandar de comparación.</rdfs:comment>
+        <rdfs:label>Unidad_ Medida</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Union -->
+
+    <owl:Class rdf:about="http://maan.com#Union">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Proceso"/>
+        <rdfs:comment>Acción de unir dos componentes en uno solo.</rdfs:comment>
+        <rdfs:label>Union</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://maan.com#Volumen -->
+
+    <owl:Class rdf:about="http://maan.com#Volumen">
+        <rdfs:subClassOf rdf:resource="http://maan.com#Magnitud"/>
+        <rdfs:comment>Magnitud física que expresa la extensión de un cuerpo en tres dimensiones.</rdfs:comment>
+        <rdfs:label>Volumen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco#Vinogeneroso -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco#Vinogeneroso">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ceu/ebaco/core/1.0#Wine"/>
+        <rdfs:label>Vinogeneroso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco#Vinoreserva -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco#Vinoreserva">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ceu/ebaco/core/1.0#Wine"/>
+        <rdfs:label>Vinoreserva</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco/core/1.0#Crianza_wine -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco/core/1.0#Crianza_wine">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ceu/ebaco/core/1.0#Wine"/>
+        <rdfs:label>Vinodecrianza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco/core/1.0#Fortified_wine -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco/core/1.0#Fortified_wine">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ceu/ebaco/core/1.0#Wine"/>
+        <rdfs:label>Vinofortificado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco/core/1.0#Gran_reserva_wine -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco/core/1.0#Gran_reserva_wine">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ceu/ebaco/core/1.0#Wine"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Vino Tinto</rdfs:label>
+        <rdfs:label>Vinogranreserva</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco/core/1.0#Rose_wine -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco/core/1.0#Rose_wine">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ceu/ebaco/core/1.0#Wine"/>
+        <rdfs:label>Vinorosado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco/core/1.0#Sparkling_wine -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco/core/1.0#Sparkling_wine">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ceu/ebaco/core/1.0#Wine"/>
+        <rdfs:label>Vinoespumoso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco/core/1.0#Table_wine -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco/core/1.0#Table_wine">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ceu/ebaco/core/1.0#Wine"/>
+        <rdfs:label>Vinodemesa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco/core/1.0#Wine -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco/core/1.0#Wine">
+        <rdfs:label>Vino</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco/tasting#has_primariy_aroma -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco/tasting#has_primariy_aroma">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ceu/ebaco/tasting/1.0#Wine_palate"/>
+        <rdfs:comment>También conocidos como aromas varietales, estos son los aromas que provienen directamente de la uva. Cada variedad de uva tiene sus propios aromas característicos.</rdfs:comment>
+        <rdfs:label>Aromaprimario</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco/tasting#has_secondary_aroma -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco/tasting#has_secondary_aroma">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ceu/ebaco/tasting/1.0#Wine_palate"/>
+        <rdfs:comment>Estos aromas se desarrollan durante la fermentación y son influenciados por las decisiones del enólogo y las condiciones de fermentación. Los aromas secundarios a menudo provienen de las interacciones entre el vino y las levaduras durante la fermentación alcohólica.</rdfs:comment>
+        <rdfs:label>Aromasecundario</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco/tasting#has_tertiary_aroma -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco/tasting#has_tertiary_aroma">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ceu/ebaco/tasting/1.0#Wine_palate"/>
+        <rdfs:comment>También conocidos como aromas de envejecimiento o bouquet, estos se desarrollan durante el envejecimiento del vino, ya sea en barricas de roble, en botella o ambas. Los aromas terciarios son más complejos y suelen derivar de reacciones químicas más lentas que ocurren con el tiempo.</rdfs:comment>
+        <rdfs:label>Aromaterciario</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ceu/ebaco/tasting/1.0#Wine_palate -->
+
+    <owl:Class rdf:about="http://purl.org/ceu/ebaco/tasting/1.0#Wine_palate">
+        <rdfs:comment>Impresión que los efluvios producen en el olfato procedente del vino</rdfs:comment>
+        <rdfs:label>Olordelvino</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/roh/mirror/vivo#Company -->
+
+    <owl:Class rdf:about="http://w3id.org/roh/mirror/vivo#Company">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:label>Company</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+        <rdfs:comment>closed arc of points, or a road and its location as</rdfs:comment>
+        <rdfs:label>location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:comment>An agent (eg. person, group, software or physical artifact).</rdfs:comment>
+        <rdfs:label>Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="https://www.w3.org/2006/time#Instant">
+        <rdfs:comment>Time instant</rdfs:comment>
+        <rdfs:label>Instant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="https://www.w3.org/2006/time#Interval">
+        <rdfs:comment>Time interval</rdfs:comment>
+        <rdfs:label>Interval</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
