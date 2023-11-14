@@ -277,21 +277,12 @@
     
 
 
-    <!-- http://maan.com#procede_de -->
-
-    <owl:ObjectProperty rdf:about="http://maan.com#procede_de">
-        <owl:inverseOf rdf:resource="http://maan.com#procede_de_inversa"/>
-        <rdfs:domain rdf:resource="http://maan.com#LoteUva"/>
-        <rdfs:range rdf:resource="http://maan.com#Finca"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://maan.com#procede_de_inversa -->
 
     <owl:ObjectProperty rdf:about="http://maan.com#procede_de_inversa">
         <rdfs:domain rdf:resource="http://maan.com#Finca"/>
         <rdfs:range rdf:resource="http://maan.com#LoteUva"/>
+        <rdfs:label>procede de inversa</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -635,6 +626,7 @@
     <!-- http://purl.org/dc/elements/1.1/hasPart -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://purl.org/dc/elements/1.1/isPartOf"/>
         <rdfs:domain rdf:resource="http://maan.com#Lote"/>
         <rdfs:range rdf:resource="http://maan.com#Lote"/>
@@ -651,30 +643,6 @@
         <rdfs:range rdf:resource="http://maan.com#Lote"/>
         <rdfs:label>is part of</rdfs:label>
     </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://maan.com#procede_de"/>
-                <owl:allValuesFrom rdf:resource="http://maan.com#LoteUva"/>
-            </owl:Restriction>
-        </rdfs:domain>
-    </rdf:Description>
     
 
 
@@ -782,7 +750,7 @@
     <!-- http://maan.com#Bodega -->
 
     <owl:Class rdf:about="http://maan.com#Bodega">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/roh/mirror/vivo#Company"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#Company"/>
         <rdfs:label>Bodega</rdfs:label>
     </owl:Class>
     
@@ -1164,13 +1132,6 @@
                 <owl:onClass rdf:resource="http://maan.com#Lote"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/isPartOf"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://maan.com#Lote"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://maan.com#Materia"/>
         <rdfs:comment>Conjunto de objetos similares entre sí que se agrupan con un fin determinado.</rdfs:comment>
         <rdfs:label>Lote</rdfs:label>
@@ -1201,13 +1162,6 @@
     <!-- http://maan.com#LoteUva -->
 
     <owl:Class rdf:about="http://maan.com#LoteUva">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://maan.com#procede_de"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://maan.com#LoteUva"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://maan.com#Lote"/>
         <rdfs:comment>Conjunto de bayas más o menos redondas, fruto de la vid, que forma racimos.</rdfs:comment>
         <rdfs:comment>Lote de racimos de uva</rdfs:comment>
@@ -1774,15 +1728,6 @@
     <owl:Class rdf:about="http://purl.org/ceu/ebaco/tasting/1.0#Wine_palate">
         <rdfs:comment>Impresión que los efluvios producen en el olfato procedente del vino</rdfs:comment>
         <rdfs:label>Olordelvino</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/roh/mirror/vivo#Company -->
-
-    <owl:Class rdf:about="http://w3id.org/roh/mirror/vivo#Company">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-        <rdfs:label>Company</rdfs:label>
     </owl:Class>
     
 
